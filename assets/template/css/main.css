@@ -63,16 +63,18 @@ body{
     padding: 0 15px;
 }
 
+.main-wrapper,.menu_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .menu{
     width: 90px;
-    position: fixed;
-    left: 0;
-    top: 0;
     background: #FFFFFF;
     box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.06);   
     padding: 40px 34px;
     height: 100vh;
+    position: relative;
 }
  
 .menu-btn{
@@ -97,7 +99,7 @@ body{
     display: none;
     width: 407px;
     padding: 60px 0;
-    padding-left: 170px;
+    padding-left: 90px;
     background: #FFFFFF;
     box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.06);
 }

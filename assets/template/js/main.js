@@ -1,3 +1,11 @@
 $(document).ready(function(){
-	console.log($('.menu').width());
+	
+
+    function menuHidden(){
+        $('.menu_list').toggle();
+        $(this).toggleClass('active');
+    }
+
+
+    $('.menu-btn').on('click',menuHidden);
 });
