@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	console.log('Готов!');
+	console.log($('.menu').width());
 });
