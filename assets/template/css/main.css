@@ -61,6 +61,7 @@ body{
 .container{
     width: 1141px;
     padding: 0 15px;
+    margin: 0 auto;
 }
 
 .main-wrapper,.menu_wrapper{
@@ -68,19 +69,34 @@ body{
     flex-wrap: wrap;
 }
 
+.menu_wrapper{
+    height: 100vh;
+}
+
 .menu{
     width: 90px;
     background: #FFFFFF;
-    box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.06);   
     padding: 40px 34px;
-    height: 100vh;
+    padding-bottom: 0;
+}
+
+.menu_sidebar{
+    box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.06);   
     position: relative;
 }
  
 .menu-btn{
-    background: transparent;
+    background-color: transparent;
+    width: 18px;
+    height: 18px;
     border: none;
     cursor: pointer;
+    background-image: url(../img/btn-open.svg);
+    background-size: contain;
+}
+
+.menu-btn.active{
+    background-image: url(../img/btn-close.svg);
 }
 
 .menu_title{
@@ -102,4 +118,52 @@ body{
     padding-left: 90px;
     background: #FFFFFF;
     box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.06);
+    margin-left: 90px;
+    position: absolute;
+}
+
+.menu_link{
+    display: block;
+    background: #F8F6F1;
+    padding: 34px 0;
+}
+
+.menu_link svg{
+    margin: 0 auto;
+    display: block;
+}
+
+.menu_item a{
+    margin-bottom: 32px;
+    display: block;
+}
+
+.menu_item .menu-link--phone{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: 'Rothek';
+    margin-bottom: 0;
+    margin-top: 269px; 
+}
+
+.menu_item--phone a svg{
+    margin-right: 10px;
+}
+
+.menu-link--yellow{
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+    color: #FFC901;
+    font-family: 'JetBrainsMono-bold';
+    padding-left: 28px;
+}
+
+.first{
+    background-image: url(../img/bg-first.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 1;
 }
