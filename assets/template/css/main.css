@@ -50,12 +50,26 @@ a{
     color: #222222;
 }
 
+button{
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
 body{
     font-family: 'JetBrainsMono-regular';
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     color: #898989;
+    height: 100vh;
+}
+
+h2{
+    font-size: 38px;
+    line-height: 48px;
+    color: #222222;
 }
 
 .container{
@@ -69,6 +83,10 @@ body{
     flex-wrap: wrap;
 }
 
+.main-wrapper{
+    height: 100vh;
+}
+
 .menu{
     width: 90px;
     background: #FFFFFF;
@@ -78,7 +96,8 @@ body{
 
 .menu_sidebar{
     box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.06);   
-    position: relative;
+    position: fixed;
+    height: 100vh;
 }
 
 .menu_sidebar.active{
@@ -98,6 +117,10 @@ body{
 
 .menu-btn.active{
     background-image: url(../img/btn-close.svg);
+}
+
+.title{
+    font-family: 'Rothek';
 }
 
 .menu_title{
@@ -172,7 +195,11 @@ body{
     background-image: url(../img/bg-first.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.section_wrapper{
     flex: 1;
+    margin-left:90px;
 }
 
 .nav{
@@ -230,7 +257,6 @@ body{
     font-size: 76px;
     line-height: 80px;
     color: #FFFFFF;
-    font-family: 'Rothek';
     padding-top: 120px;
     padding-bottom: 30px;
 }
@@ -281,4 +307,176 @@ body{
     width: 100%;
     text-align: center;
     padding-top: 22px;
+    color: #fff;
+    font-family: 'Rothek';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.products{
+    padding: 90px 0 100px 0;
+}
+
+.products .title{
+    padding-bottom: 51px;
+}
+
+.product_item{
+    width: 33.33%;
+    padding: 0 30px 30px 30px;
+    border: 1px solid #EFEFEF;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+.btn-buy{
+    padding: 6px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.btn-inner{
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+
+.products_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product_img{
+    width: 100%;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag{
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    font-family: 'JetBrainsMono-bold';
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 20px;
+    border-radius: 11px 11px 11px 0px;
+}
+
+.tag--hit{
+    background: #65C729;
+}
+
+.tag--best{
+    background: #222222;
+}
+
+.tag--sale{
+    background: #F96C3F;
+}
+
+.product_title{
+    display: block;
+    font-size: 14px;
+    font-family: 'JetBrainsMono-bold';
+    line-height: 28px;
+}
+
+.product_title span{
+    color: #D2D2D2;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.availability,.product_title{
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'JetBrainsMono-bold';
+}
+
+.availability{
+    margin: 10px 0 30px 0;
+    color: #D2D2D2;
+}
+
+.availability--green{
+    color: #8ACE46;
+}
+
+.product_description{
+    margin-bottom: 40px;
+    line-height: 22px;
+}
+
+.product_prices_block{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.product_price{
+    font-size: 28px;
+    line-height: 30px;
+    font-family: 'Rothek';
+    color: #222222;
+}
+
+.product_old-price{
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'Rothek';  
+    text-decoration: line-through;
+    color: #D2D2D2;
+    margin-right: 16px;
+}
+
+.product_buy{
+    display: flex;
+    align-items: center;
+}
+
+.product_settings{
+    width: 38px;
+    height: 38px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-gray{
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../img/pr-gray-bg.svg);
+    margin-right: 8px;
+}
+
+.bg-gray:last-child{
+    margin-right: 0;
+}
+ 
+
+@media(max-width:992px){
+    .product_item{
+        width: 49%;
+    }
+    .container{
+        width: 991px;
+    }
+}
+
+@media(max-width:427px){
+    .container{
+        width: 100%;
+    }
+    .product_item{
+        width: 100%;
+    }
 }
