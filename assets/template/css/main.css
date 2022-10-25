@@ -832,6 +832,86 @@ h2{
     margin-right: 20px;
 }
 
+.rent{
+    padding: 100px 0;
+}
+
+.desc{
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+.rent_list{
+    padding-top: 74px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rent_item{
+    width: 32%;
+    position: relative;
+    padding: 97px 40px 40px 40px;
+    background: #F5F5F1;
+    display: flex;
+    flex-direction: column;
+}
+
+.rent_item::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-image: url(../img/rent-after.svg);
+    background-size: cover;
+    top: -1px;
+    left: 0;
+}
+
+.rent_item span{
+    position: absolute;
+    top: -40px;
+    font-size: 74px;
+    line-height: 98px;
+    color: #FFC901;
+    font-family: 'JetBrainsMono-extra';
+    z-index: 100;
+}
+
+.rent_item h3{
+    font-size: 26px;
+    line-height: 30px;
+    color: #222222;
+    margin-bottom: 30px;
+}
+
+.rent_item strong{
+    color: #222222;
+}
+
+.rent_item p{
+    margin-bottom: 45px;
+}
+
+.rent_price{
+    font-size: 18px;
+    line-height: 30px;
+    color: #222222;
+    margin-bottom: 40px;
+    font-family: 'Rothek';
+    margin-top: auto;
+}
+
+.rent_price strong{
+    font-size: 28px;
+}
+
+.rent_btn{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
 @keyframes border-anim {
     from {
         transform: scale(0.9);
