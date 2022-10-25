@@ -1023,6 +1023,91 @@ h2{
     color: #251E03;
 }
 
+.advantages{
+    position: relative;
+}
+
+.advantages::after{
+    position: absolute;
+    content: '';
+    background-image: url(../img/advantg-bg.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.advantages_list{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.advantages_item{
+    display: flex;
+    border: 1px solid #EAEAEA;
+    width: 49%;
+    padding: 44px 44px 50px 50px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+.advantages_count{
+    position: relative;
+    margin-right: 43px;
+}
+
+.advantages_count span{
+    position: relative;
+    z-index: 100;
+    font-size: 74px;
+    line-height: 98px;
+    color: #222222;
+    font-family: 'JetBrainsMono-extra';
+}
+
+.advantages_count::after{
+    content: '';
+    position: absolute;
+    background-image: url(../img/border-advant.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 130px;
+    height: 17px;
+    left: -25px;
+    bottom: 12px;
+}
+
+.advantages_text .title{
+    color: #222222;
+    margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.list{
+    position: relative;
+}
+
+.list li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.list li::before{
+    content: '';
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border: 4px solid #FFC901;
+    display: block;
+}
+
 @keyframes border-anim {
     from {
         transform: scale(0.9);
