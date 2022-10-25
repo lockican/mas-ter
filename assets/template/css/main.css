@@ -470,6 +470,7 @@ h2{
     position: absolute;
     z-index: -1;
     opacity: 0;
+    width: 1px;
 }
 
 .custom-checkbox>span {
@@ -612,7 +613,7 @@ h2{
     margin-top: 40px;
 }
 
-.consultation_form input{
+input{
     width: 100%;
     background: transparent;
     border: none;
@@ -626,7 +627,7 @@ h2{
     font-family: 'JetBrainsMono-regular';
 }
 
-.consultation_form input::placeholder{
+input::placeholder{
     color: #fff;
 }
 
@@ -1025,6 +1026,7 @@ h2{
 
 .advantages{
     position: relative;
+    padding-bottom: 76px;
 }
 
 .advantages::after{
@@ -1106,6 +1108,40 @@ h2{
     background-color: #fff;
     border: 4px solid #FFC901;
     display: block;
+}
+
+.help-sec{
+    background-color: #FFC901;
+    background-image: url(../img/bg-help.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    position: relative;
+}
+
+.help-sec::before{
+    position: absolute;
+    content: '';
+    background-image: url(../img/server-bg.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 100%;
+    height: 425px;
+}
+
+.help-form_inner{
+    width: 50%;
+    margin-left: auto;
+}
+
+.help_form{
+    position: relative;
+    z-index: 100;
+}
+
+.help-form_inner p{
+    color: #907511;
+    margin-bottom: 50px;
 }
 
 @keyframes border-anim {
