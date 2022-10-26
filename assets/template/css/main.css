@@ -1218,6 +1218,72 @@ input::placeholder{
     padding: 20px 0;
 }
 
+.servers{
+    position: relative;
+    padding-bottom: 152px;
+}
+
+.servers::after{
+    position: absolute;
+    content: '';
+    background-image: url(../img/advantg-bg.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.servers .title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.servers_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.servers_item{
+    text-align: center;
+    padding: 0 70px;
+    border-right: 1px solid #E1E1E1;
+}
+
+.servers_item:last-child{
+    border: none;
+}
+
+.servers_item strong{
+    font-size: 72px;
+    line-height: 80px;
+    color: #222222;
+    font-family: 'JetBrainsMono-extra';
+}
+
+.servers_bottom{
+    position: relative;
+    z-index: 100;
+}
+
+.servers_bottom img{
+    display: block;
+    margin: 0 auto;
+}
+
+.servers-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 209px;
+    padding: 20px 0;
+    text-align: center;
+}
+
 @keyframes border-anim {
     from {
         transform: scale(0.9);
