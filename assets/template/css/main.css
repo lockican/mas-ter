@@ -1722,6 +1722,7 @@ header{
 
 .cart{
     padding-top: 80px;
+    padding-bottom: 100px;
 }
 
 .cart_img{
@@ -1894,6 +1895,31 @@ header{
 
 .js-tab-content.current{
     display: block;
+}
+
+.products--cart {
+    padding-top: 0;
+}
+
+.products--cart_block{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.bnts_slider{
+    display: flex;
+    gap: 24px;
+}
+
+.products--cart_block .title{
+    padding-bottom: 0;
+}
+
+.products_list--slider .product_item{
+    margin-bottom: 0;
 }
 
 @keyframes border-anim {

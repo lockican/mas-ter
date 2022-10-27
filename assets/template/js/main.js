@@ -14,7 +14,16 @@ $(document).ready(function(){
         slidesToScroll: 1,
         prevArrow:$('.manufacturer-nav .slick-prev'),
         nextArrow:$('.manufacturer-nav .slick-next'),
-        
+    });
+
+    // products slider (cart)
+
+    $('.products_list--slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow:$('.bnts_slider .prev'),
+        nextArrow:$('.bnts_slider .next'),
     });
 
     // cart slider
