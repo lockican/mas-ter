@@ -1764,10 +1764,24 @@ header{
 }
 
 .cart_comparison{
+    display: flex;
+    flex-wrap: wrap;
     padding-top: 40px;
     padding-bottom: 26px;
     border-bottom: 1px solid #E9E9E9;
     margin-bottom: 30px;
+    gap: 30px;
+}
+
+.cart_comparison span{
+    font-size: 13px;
+    line-height: 20px;
+    font-family: 'JetBrainsMono-bold';
+}
+
+.cart_comparison a{
+    display: flex;
+    gap: 10px;
 }
 
 .cart_prices .availability{
