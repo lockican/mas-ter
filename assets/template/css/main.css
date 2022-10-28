@@ -1936,6 +1936,408 @@ header{
     margin-bottom: 0;
 }
 
+.configurator{
+    padding-top: 80px;
+    padding-bottom: 173px;
+}
+
+.configurator-head{
+    font-size: 26px;
+    line-height: 30px;
+    color: #222222;
+    font-family: 'Rothek';
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.configurator-head::before{
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: #222222;
+    display: block;
+    margin-right: 22px;
+}
+
+.configurator .title{
+    margin-bottom: 60px;
+}
+
+.configurator_btn{
+    width: 130px;
+    padding: 25px 0;
+    text-align: center;
+    border: 1px solid #E9E9E9;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: 'Rothek';
+    color: #251E03;
+    background-color: #fff;
+}
+
+.configurator_btn.current{
+    background: #FFC901;
+    border: none;
+}
+
+.configurator_block{
+    margin-bottom: 60px;
+}
+
+
+.custom-checkbox>.gray-cbx::before{
+    background-color: #F4F3EF;
+}
+
+.custom-checkbox>input:checked+.gray-cbx::before{
+    background-color: #F4F3EF;
+}
+
+.custom-checkbox>input:not(:disabled):active+.gray-cbx::before{
+    background-color: #F4F3EF;
+}
+
+.configurator_bottom-list{
+    display: flex;
+    flex-direction: column;
+    background: #F8F6F1;
+    padding: 30px 40px 30px 30px;
+}
+
+.configurator_bottom_item{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  /* для элемента label связанного с .custom-radio */
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .custom-radio+label:hover::before{
+    background-color: #FFC901;
+  }
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 50%;
+    margin-right: 14px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-color: #FFFFFF;
+  }
+
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  .custom-radio:not(:disabled):active+label::before {
+    background-color: #FFC901;
+    border-color: #FFC901;
+  }
+
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  .custom-radio:checked+label::before {
+    border-color: #FFC901;
+    background-color: #FFC901;
+    background-image: url("../img/checbox-radio.svg");
+  }
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  .custom-radio:disabled+label::before {
+    background-color: #FFC901;
+  }
+
+.configurator_bottom_radio label{
+    font-size: 13px;
+    line-height: 17px;
+    color: #222222;
+}
+
+.configurator_bottom_price{
+    font-size: 13px;
+    line-height: 17px;
+    color: #222222;
+    font-family: 'JetBrainsMono-bold';
+}
+
+.configurator_bottom_radio{
+    display: flex;
+}
+  
+.btn-show-more{
+    width: 150px;
+    margin-left: 25px;
+    font-family: 'Rothek';
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 16px;
+}
+
+.btn-show-more svg{
+    margin-left: 14px;
+}
+
+.configurator_top-list{
+    display: flex;
+}
+
+.configurator_name{
+    font-size: 14px;
+    line-height: 20px;
+    color: #222222;
+    width: 227px;
+    font-family: 'JetBrainsMono-bold';
+    margin-right: 28px;
+    flex: 0 0 auto;
+}
+
+.configurator_checkboxes{
+    display: flex;
+    column-gap: 24px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.custom-checkbox>.gray-cbx::before{
+    margin-right: 10px;
+}
+
+.checkbox-text{
+    color: #222222;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.configurator_top-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.configurator_top_item{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.configurator_top_item:last-child{
+    margin-bottom: 0;
+}
+
+.configurator_inputs input{
+    padding: 12px 12px 12px 23px;
+    background: #F4F3EF;
+    color: #222222;
+    margin-bottom: 0;
+    width: 27%;
+}
+
+.configurator_inputs{
+    display: flex;
+    align-items: center;
+}
+
+.configurator_inputs span{
+    display: block;
+    margin: 0 5px;
+}
+
+.configurator_inputs input::placeholder{
+    color: #222222;
+}
+
+.configurator_inputs .inp-first::placeholder{
+    color: #BFBFBF;
+}
+
+.configurator_bottom_radio input{
+    width: 20px;
+}
+
+.configurator_result-head strong{
+    font-family: 'Rothek';
+    font-size: 38px;
+    line-height: 48px;
+    color: #222222;
+    margin-right: 40px;
+    display: block;
+}
+
+.configurator_result{
+    padding-top: 40px;
+}
+
+.configurator_result-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.configurator_result-head .availability{
+    margin: 0;
+}
+
+.configurator_result_wrapper{
+    padding: 50px 60px 50px 50px;
+    background-color: #FFC901;
+    background-image: url(../img/configurator-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.configurator_result_list li{
+    color: #251E03;
+    margin-bottom: 40px;
+}
+
+.configurator_result_list{
+    margin-bottom: 60px;
+}
+
+.configurator_result_list li:last-child{
+    margin-bottom: 0;
+}
+
+.configurator_result-title{
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'JetBrainsMono-bold';
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.configurator_result-title::before{
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #251E03;
+    margin: 0 10px;
+}
+
+.configurator_result-content{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.configurator_btn-pdf{
+    padding:8px 16px ;
+    font-size: 13px;
+    line-height: 20px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.configurator .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.configurator_info{
+    width: 60%;
+    margin-right: auto;
+}
+
+.configurator_cart{
+    flex:0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 10px;
+
+}
+
+.configurator_cart .product_prices_block{
+    margin-bottom: 40px;
+}
+
+.btns_configurator a,.btns_configurator{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btns_configurator a{
+    background: #F8F6F1;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #222222;
+    font-family: 'JetBrainsMono-bold';
+}
+
+.btns_configurator{
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.garant::before{
+    content: url(../img/garant.svg);
+}
+
+.individual::before{
+    content: url(../img/indv.svg);
+}
+
+.help::before{
+    content: url(../img/umbrella.svg);
+}
+
+.delivery::before{
+    content: url(../img/home.svg);
+}
+
+.exp::before{
+    content: url(../img/people.svg);
+}
+
+.direct::before{
+    content: url(../img/box.svg);
+}
+
+.configurator_cart_list li::before{
+    background: #FFF9E3;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.configurator_cart_list li{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
 @keyframes border-anim {
     from {
         transform: scale(0.9);
