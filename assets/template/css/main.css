@@ -2402,6 +2402,42 @@ header{
     background-size: 36px 36px;
 }
 
+.info--inner{
+    padding-top: 0;
+}
+
+.info--inner h2{
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.list--info{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 31px;
+}
+
+.list--info li strong{
+    color: #222222;
+    font-weight: 400;
+}
+
+.list--info li{
+    align-items: flex-start;
+}
+
+.list--info li::before{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFF9E3;
+    background-image: url(../img/checkbox-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 @keyframes border-anim {
     from {
         transform: scale(0.9);
