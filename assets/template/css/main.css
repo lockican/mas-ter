@@ -2403,7 +2403,16 @@ header{
 }
 
 .info--inner{
-    padding-top: 0;
+    padding: 0;
+}
+
+.info--inner .container{
+    justify-content: start;
+}
+
+.info--inner .info_block-img{
+    width: 500px;
+    margin-right: 80px;
 }
 
 .info--inner h2{
@@ -2436,6 +2445,36 @@ header{
     background-image: url(../img/checkbox-icon.svg);
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.equipment_list{
+    display: flex;
+    margin-top: 50px;
+}
+
+.equipment_item{
+    border: 1px solid #E9E9E9;
+    padding: 56px 0;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.equipment_item svg{
+    margin-bottom: 39px;
+}
+
+.equipment_item p{
+    text-align: center;
+}
+
+.equipment_head{
+    font-size: 50px;
+    line-height: 50px;
+    color: #222222;
+    font-family: 'JetBrainsMono-bold';
+    margin-bottom: 10px;
 }
 
 @keyframes border-anim {
