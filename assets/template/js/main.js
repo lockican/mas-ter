@@ -16,6 +16,20 @@ $(document).ready(function(){
         nextArrow:$('.manufacturer-nav .slick-next'),
     });
 
+    // review slider
+
+    $('.reviews_list').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow:$('.review_btns .slick-prev'),
+        nextArrow:$('.review_btns .slick-next'),
+        dots:true,
+        appendDots:$('.dots'),
+        adaptiveHeight: true
+
+    });
+
     // products slider (cart)
 
     $('.products_list--slider').slick({

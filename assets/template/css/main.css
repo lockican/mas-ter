@@ -2447,6 +2447,10 @@ header{
     background-repeat: no-repeat;
 }
 
+.equipment{
+    padding-bottom: 100px;
+}
+
 .equipment_list{
     display: flex;
     margin-top: 50px;
@@ -2477,6 +2481,114 @@ header{
     margin-bottom: 10px;
 }
 
+.reviews_head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.review_btns{
+    align-self: flex-end;
+    display: flex;
+    gap: 20px;
+}
+
+.reviews_list{
+    margin-top: 50px;
+}
+
+.reviws_wrapper{
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slick-initialized .review_item{
+    display: flex;
+    padding-top: 20px;
+}
+
+.review_img{
+    width: 364px;
+    margin-right: 100px;
+    position: relative;
+}
+
+.review_img img{
+    z-index: 1000;
+    position: relative;
+}
+ 
+
+.review_img::after{
+    content: url('../img/review-icn.png');
+    top: -20px;
+    right: -50px;
+    width: 100px;
+    height: 61px;
+    position: absolute;
+    z-index: 1;
+}
+
+.review_item_text p{
+    padding: 40px 0;
+}
+
+.review_item_text strong{
+    font-size: 16px;
+    line-height: 16px;
+    color: #222222;
+    font-family: 'Rothek';
+}
+
+.review_item_text{
+ 
+    margin-bottom: 30px;
+}
+
+.reviews .dots{
+    margin-top: auto;
+    width: 58%;
+    margin-left: auto;
+    margin-top: -10px;
+    z-index: 100;
+}
+
+.reviews .dots .slick-dots{
+    display: flex;
+    gap: 9px;
+}
+
+.reviews .dots .slick-dots li{
+    width: 9px;
+    height: 9px;
+    background: #F5F5F1;
+    cursor: pointer;
+}
+
+.reviews .dots .slick-dots button{
+    font-size: 0;
+}
+
+.reviews .dots .slick-dots .slick-active{
+    background: #FFC901;
+}
+
+.reviews{
+    padding-bottom: 100px;
+}
+
+.review-more{
+    font-family: 'Rothek';
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+ 
 @keyframes border-anim {
     from {
         transform: scale(0.9);
