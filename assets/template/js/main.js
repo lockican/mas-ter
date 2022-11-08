@@ -94,11 +94,11 @@ $(document).ready(function(){
 
      //show items configurator
 
-     $('.btn-show-more').on('click',function(e){
-        e.preventDefault();
-        $(this).closest('.configurator_bottom-list').find('.configurator_bottom_item').show();
-        $(this).hide();
-     })
+    //  $('.btn-show-more').on('click',function(e){
+    //     e.preventDefault();
+    //     $(this).closest('.configurator_bottom-list').find('.configurator_bottom_item').show();
+    //     $(this).hide();
+    //  })
 
      $('.configurator_btn').on('click',function(e){
         e.preventDefault();

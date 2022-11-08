@@ -151,14 +151,25 @@
                     <div class="configurator_block">
                         <strong class="configurator-head">Количество процессоров</strong>
                         <div class="configurator_btns">
-                            <button type="button" class="configurator_btn">x1</button>
-                            <button type="button" class="configurator_btn">x2</button>
-                            <button type="button" class="configurator_btn current">x4</button>
-                            <button type="button" class="configurator_btn">x8</button>
+
+                            <div class="configurator_radio-block">
+                                <input class="custom-radio custom-radio-btn" name="processor" type="radio" id="radio-2" value="x2" checked>
+                                <label for="radio-2">x2</label>
+                            </div>
+                            <div class="configurator_radio-block">
+                                <input class="custom-radio custom-radio-btn" name="processor" type="radio" id="radio-3" value="x3" >
+                                <label for="radio-3">x4</label>
+                            </div>
+                            <div class="configurator_radio-block">
+                                <input class="custom-radio custom-radio-btn" name="processor" type="radio" id="radio-4" value="x4">
+                                <label for="radio-4">x8</label>
+                            </div>
+                            
+                            
                         </div>
                     </div>
 
-                    <div class="configurator_block">
+                    <div class="configurator_block configurator_block-cpu">
                         <strong class="configurator-head">CPU</strong>
                         <div class="configurator_top-list">
                             <div class="configurator_top_item">
@@ -200,7 +211,7 @@
                                 <div class="configurator_name">Семейство процессоров:</div>
                                 <div class="configurator_checkboxes">
                                     <label class="custom-checkbox">
-                                        <input type="checkbox" name="manufact-core" value="AMD" checked="">
+                                        <input type="checkbox" name="manufact-core" value="Amd" checked="">
                                         <span class="checkbox-text gray-cbx">
                                             AMD
                                         </span>
@@ -226,7 +237,7 @@
                         <div class="configurator_bottom-list">
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="core" checked type="radio" id="core-1" value="Intel Xeon Bronze 3104 (6С 8.25M Cache 1.70 GHz)">
+                                    <input class="custom-radio" name="core" checked type="radio" id="core-1" data-manuf="Intel" value="Intel Xeon Bronze 3104 (6С 8.25M Cache 1.70 GHz)">
                                     <label for="core-1">Intel Xeon Bronze 3104 (6С 8.25M Cache 1.70 GHz)</label>
                                 </div>
                                 <span class="configurator_bottom_price">включено</span>
@@ -234,7 +245,7 @@
                             </div>
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="core" type="radio" id="core-2" value="Intel Xeon Bronze 3204 (6С 8.25M Cache 1.90 GHz)">
+                                    <input class="custom-radio" name="core" type="radio" id="core-2" data-manuf="Intel" value="Intel Xeon Bronze 3204 (6С 8.25M Cache 1.90 GHz)">
                                     <label for="core-2">Intel Xeon Bronze 3204 (6С 8.25M Cache 1.90 GHz)</label>
                                 </div>
                                 <span class="configurator_bottom_price">21 566 ₽</span>
@@ -242,7 +253,7 @@
                             </div>
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="core" type="radio" id="core-3" value="Intel Xeon Bronze 3206R (8С 11M Cache 1.90 GHz)">
+                                    <input class="custom-radio" name="core" type="radio" id="core-3" data-manuf="Intel" value="Intel Xeon Bronze 3206R (8С 11M Cache 1.90 GHz)">
                                     <label for="core-3">Intel Xeon Bronze 3206R (8С 11M Cache 1.90 GHz)</label>
                                 </div>
                                 <span class="configurator_bottom_price">33 538 ₽</span>
@@ -250,25 +261,25 @@
                             </div>
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="core" type="radio" id="core-4" value="Intel Xeon Silver 4108 (8C 11M Caсhe 1.80 GHz)">
-                                    <label for="core-4">Intel Xeon Silver 4108 (8C 11M Caсhe 1.80 GHz)</label>
+                                    <input class="custom-radio" name="core" type="radio" id="core-4" data-manuf="Amd" value="Intel Xeon Silver 4108 (8C 11M Caсhe 1.80 GHz)">
+                                    <label for="core-4">Amd (8C 11M Caсhe 1.80 GHz)</label>
                                 </div>
                                 <span class="configurator_bottom_price">51 742 ₽</span>
                                 
                             </div>
-                            <div class="configurator_bottom_item" style="display: none;">
+                            <div class="configurator_bottom_item" >
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="core" type="radio" id="core-6" value="Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)">
+                                    <input class="custom-radio" name="core" type="radio" id="core-6" data-manuf="Intel" value="Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)">
                                     <label for="core-6">Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)</label>
                                 </div>
                                 <span class="configurator_bottom_price">64 944 ₽</span>
                             </div>
-                            <div class="configurator_bottom_item" style="display: none;">
+                            <div class="configurator_bottom_item" >
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="core" type="radio" id="core-6" value="Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)">
-                                    <label for="core-6">Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)</label>
+                                    <input class="custom-radio" name="core" type="radio" id="core-7" data-manuf="Amd" value="Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)">
+                                    <label for="core-7">Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)</label>
                                 </div>
-                                <span class="configurator_bottom_price">64 944 ₽</span>
+                                <span class="configurator_bottom_price">164 944 ₽</span>
                             </div>
 
                             <button class="btn-show-more">
@@ -398,7 +409,7 @@
                                 <div class="configurator_inputs">
                                     <input type="text" readonly placeholder="36 Gb" class="inp-first">
                                     <span>-</span>
-                                    <input type="text" placeholder="8 TB" class="inp-last">
+                                    <input type="text" placeholder="8 TB" class="inp-last hard-size">
                                 </div>
                             </div>
 
@@ -953,5 +964,6 @@
     <script src="assets/template/js/slick.js"></script>
     <script src="assets/template/js/main.js"></script>
     <script src="assets/template/js/phone.js"></script>
+    <script src="assets/template/js/configurator.js"></script>
 </body>
 </html>

@@ -76,6 +76,7 @@ h2{
     width: 1141px;
     padding: 0 15px;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .main-wrapper,.menu_wrapper{
@@ -97,7 +98,7 @@ h2{
 .menu_sidebar{
     box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.06);   
     position: fixed;
-    height: 100vh;
+    height: 100%;
 }
 
 .menu_sidebar.active{
@@ -144,7 +145,7 @@ h2{
     box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.06);
     margin-left: 90px;
     position: fixed;
-    height: 100vh;
+    height: 100%;
     z-index: 1000;
 }
 
@@ -2588,7 +2589,42 @@ header{
     gap: 14px;
 }
 
+.info_block img{
+    width: 100%;
+}
+
+
+.configurator_bottom_item.hidden{
+    display: none;
+}
  
+.custom-radio-btn,.custom-radio-btn+label{
+    width: 130px;
+    padding: 25px 0;
+    text-align: center;
+    border: 1px solid #E9E9E9;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: 'Rothek';
+    color: #251E03;
+    background-color: #fff;
+    justify-content: center;
+}
+
+.custom-radio-btn:checked+label::before,.custom-radio-btn+label::before{
+    display: none;
+}
+
+.custom-radio-btn:not(:disabled):active+label,.custom-radio-btn:checked+label{
+    background-color: #FFC901;
+    border-color: #FFC901;
+}
+
+ 
+.configurator_btns{
+    display: flex;
+}
+
 @keyframes border-anim {
     from {
         transform: scale(0.9);
@@ -2601,12 +2637,62 @@ header{
       }
 }
 
+@media (max-width:1200px) {
+    body{
+        zoom: 0.8;
+    }
+}
+
 @media(max-width:992px){
+    body{
+        zoom: 0.7;
+    }
+
+    .main-wrapper{
+        display: block;
+    }
+
     .product_item{
         width: 49%;
     }
-    .container{
-        width: 991px;
+
+
+    .help-sec::before{
+        background-size: 45%;
+        background-position: left center;
+    }
+}
+
+@media(max-width:769px){
+    body{
+        zoom: 1;
+    }
+
+
+
+ 
+    .first_bottom{
+        flex-wrap: wrap;
+    }
+
+    .first_bottom_item{
+        width: 33%;
+        height: auto;
+        background-size: contain;
+    }
+
+    h1,.first_title{
+        font-size: 56px;
+        line-height: 60px;
+    }
+
+    .menu{
+        width: 60px;
+        padding: 40px 19px;
+    }
+
+    .section_wrapper{
+        margin-left: 60px;
     }
 }
 
