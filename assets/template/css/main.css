@@ -2010,6 +2010,7 @@ header{
     display: flex;
     align-content: center;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 14px;
 }
 
@@ -2027,9 +2028,7 @@ header{
     cursor: pointer;
   }
 
-  .custom-radio+label:hover::before{
-    background-color: #FFC901;
-  }
+ 
   /* создание в label псевдоэлемента  before со следующими стилями */
   .custom-radio+label::before {
     content: '';
@@ -2059,9 +2058,9 @@ header{
     background-image: url("../img/checbox-radio.svg");
   }
   /* стили для радиокнопки, находящейся в состоянии disabled */
-  .custom-radio:disabled+label::before {
+  /* .custom-radio:disabled+label::before {
     background-color: #FFC901;
-  }
+  } */
 
 .configurator_bottom_radio label{
     font-size: 13px;
@@ -2623,6 +2622,27 @@ header{
  
 .configurator_btns{
     display: flex;
+}
+
+
+.configurator_bottom_item label span{
+    padding-right: 5px;
+}
+
+.ram-count{
+    width: 100px;
+    background-color: #fff;
+    color: #222222;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    display: none;
+    font-size: 14px;
+}
+
+
+.configurator_bottom_item.disabled .configurator_bottom_radio label,.configurator_bottom_item.disabled .configurator_bottom_price {
+    color: #a5a4a4;
+    cursor: not-allowed;
 }
 
 @keyframes border-anim {

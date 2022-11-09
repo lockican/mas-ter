@@ -153,15 +153,15 @@
                         <div class="configurator_btns">
 
                             <div class="configurator_radio-block">
-                                <input class="custom-radio custom-radio-btn" name="processor" type="radio" id="radio-2" value="x2" checked>
+                                <input class="custom-radio custom-radio-btn active" data-max-val="32" name="processor" type="radio" id="radio-2" value="x2" checked>
                                 <label for="radio-2">x2</label>
                             </div>
                             <div class="configurator_radio-block">
-                                <input class="custom-radio custom-radio-btn" name="processor" type="radio" id="radio-3" value="x3" >
+                                <input class="custom-radio custom-radio-btn" data-max-val="64" name="processor" type="radio" id="radio-3" value="x3" >
                                 <label for="radio-3">x4</label>
                             </div>
                             <div class="configurator_radio-block">
-                                <input class="custom-radio custom-radio-btn" name="processor" type="radio" id="radio-4" value="x4">
+                                <input class="custom-radio custom-radio-btn" data-max-val="192" name="processor" type="radio" id="radio-4" value="x4">
                                 <label for="radio-4">x8</label>
                             </div>
                             
@@ -238,48 +238,60 @@
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
                                     <input class="custom-radio" name="core" checked type="radio" id="core-1" data-manuf="Intel" value="Intel Xeon Bronze 3104 (6С 8.25M Cache 1.70 GHz)">
-                                    <label for="core-1">Intel Xeon Bronze 3104 (6С 8.25M Cache 1.70 GHz)</label>
+                                    <label for="core-1">
+                                        <span>x2</span>
+                                        Intel Xeon Bronze 3104 (6С 8.25M Cache 1.70 GHz)</label>
                                 </div>
-                                <span class="configurator_bottom_price">включено</span>
+                                <span class="configurator_bottom_price" data-x2="включено" data-x4="32 566" data-x8="325 566">включено</span>
                                 
                             </div>
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
                                     <input class="custom-radio" name="core" type="radio" id="core-2" data-manuf="Intel" value="Intel Xeon Bronze 3204 (6С 8.25M Cache 1.90 GHz)">
-                                    <label for="core-2">Intel Xeon Bronze 3204 (6С 8.25M Cache 1.90 GHz)</label>
+                                    <label for="core-2">
+                                        <span>x2</span>
+                                        Intel Xeon Bronze 3204 (6С 8.25M Cache 1.90 GHz)</label>
                                 </div>
-                                <span class="configurator_bottom_price">21 566 ₽</span>
+                                <span class="configurator_bottom_price" data-x2="21 566" data-x4="22 566" data-x8="25 566">21 566 ₽</span>
                                 
                             </div>
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
                                     <input class="custom-radio" name="core" type="radio" id="core-3" data-manuf="Intel" value="Intel Xeon Bronze 3206R (8С 11M Cache 1.90 GHz)">
-                                    <label for="core-3">Intel Xeon Bronze 3206R (8С 11M Cache 1.90 GHz)</label>
+                                    <label for="core-3">
+                                        <span>x2</span>
+                                        Intel Xeon Bronze 3206R (8С 11M Cache 1.90 GHz)</label>
                                 </div>
-                                <span class="configurator_bottom_price">33 538 ₽</span>
+                                <span class="configurator_bottom_price" data-x2="33 538" data-x4="32 566" data-x8="325 566">33 538 ₽</span>
                                 
                             </div>
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
                                     <input class="custom-radio" name="core" type="radio" id="core-4" data-manuf="Amd" value="Intel Xeon Silver 4108 (8C 11M Caсhe 1.80 GHz)">
-                                    <label for="core-4">Amd (8C 11M Caсhe 1.80 GHz)</label>
+                                    <label for="core-4">
+                                        <span>x2</span>
+                                        Amd (8C 11M Caсhe 1.80 GHz)</label>
                                 </div>
-                                <span class="configurator_bottom_price">51 742 ₽</span>
+                                <span class="configurator_bottom_price" data-x2="51 742" data-x4="32 566" data-x8="325 566">51 742 ₽</span>
                                 
                             </div>
                             <div class="configurator_bottom_item" >
                                 <div class="configurator_bottom_radio">
                                     <input class="custom-radio" name="core" type="radio" id="core-6" data-manuf="Intel" value="Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)">
-                                    <label for="core-6">Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)</label>
+                                    <label for="core-6">
+                                        <span>x2</span>
+                                        Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)</label>
                                 </div>
-                                <span class="configurator_bottom_price">64 944 ₽</span>
+                                <span class="configurator_bottom_price" data-x2="64 944" data-x4="32 566" data-x8="325 566">64 944 ₽</span>
                             </div>
                             <div class="configurator_bottom_item" >
                                 <div class="configurator_bottom_radio">
                                     <input class="custom-radio" name="core" type="radio" id="core-7" data-manuf="Amd" value="Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)">
-                                    <label for="core-7">Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)</label>
+                                    <label for="core-7">
+                                        <span>x2</span>
+                                        Intel Xeon Silver 4208 (8C 11M Caсhe 2.10 GHz)</label>
                                 </div>
-                                <span class="configurator_bottom_price">164 944 ₽</span>
+                                <span class="configurator_bottom_price" data-x2="164 944" data-x4="321 566" data-x8="1 125 566">164 944 ₽</span>
                             </div>
 
                             <button class="btn-show-more">
@@ -291,7 +303,7 @@
                         </div>
                     </div>
 
-                    <div class="configurator_block">
+                    <div class="configurator_block configurator_block-ram">
                         <strong class="configurator-head">Оперативная память RAM</strong>
                         <div class="configurator_top-list">
                             <div class="configurator_top_item">
@@ -299,7 +311,7 @@
                                 <div class="configurator_inputs">
                                     <input type="text" readonly placeholder="1,7 Ghz" class="inp-first">
                                     <span>-</span>
-                                    <input type="text" placeholder="3.8 Ghz" class="inp-last">
+                                    <input type="text" placeholder="3.8 Ghz" class="inp-last" >
                                 </div>
                             </div>
                             <div class="configurator_top_item">
@@ -348,47 +360,47 @@
                         <div class="configurator_bottom-list">
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="ram" checked type="radio" id="ram-1" value="16GB DDR4 RDIMM 2133MHz">
+                                    <input class="custom-radio active" name="ram" checked type="checkbox" id="ram-1" value="16GB DDR4 RDIMM 2133MHz">
                                     <label for="ram-1">16GB DDR4 RDIMM 2133MHz</label>
                                 </div>
                                 <span class="configurator_bottom_price">включено</span>
-                                
+                                <input type="number"  class="ram-count" name="count-ram" style="display: block;" value="1">
                             </div>
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="ram"  type="radio" id="ram-2" value="16GB DDR4 RDIMM 2400MHz">
+                                    <input class="custom-radio" name="ram"  type="checkbox" id="ram-2" value="16GB DDR4 RDIMM 2400MHz">
                                     <label for="ram-2">16GB DDR4 RDIMM 2400MHz
                                     </label>
                                 </div>
                                 <span class="configurator_bottom_price">7 500 ₽</span>
-                                
+                                <input type="number"  class="ram-count" name="count-ram" value="1">
                             </div>
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="ram"  type="radio" id="ram-3" value="32GB DDR4 RDIMM 2133MHz">
+                                    <input class="custom-radio" name="ram"  type="checkbox" id="ram-3" value="32GB DDR4 RDIMM 2133MHz">
                                     <label for="ram-3">32GB DDR4 RDIMM 2133MHz
                                     </label>
                                 </div>
                                 <span class="configurator_bottom_price">12 100 ₽</span>
-                                
+                                <input type="number"  class="ram-count" name="count-ram" value="1">
                             </div>
                             <div class="configurator_bottom_item">
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="ram"  type="radio" id="ram-4" value="32GB DDR4 RDIMM 2133MHz">
+                                    <input class="custom-radio" name="ram"  type="checkbox" id="ram-4" value="32GB DDR4 RDIMM 2133MHz">
                                     <label for="ram-4">32GB DDR4 RDIMM 2133MHz
                                     </label>
                                 </div>
                                 <span class="configurator_bottom_price">15 500 ₽</span>
-                                
+                                <input type="number"  class="ram-count" name="count-ram" value="1">
                             </div>
-                            <div class="configurator_bottom_item" style="display: none;">
+                            <div class="configurator_bottom_item" >
                                 <div class="configurator_bottom_radio">
-                                    <input class="custom-radio" name="ram"  type="radio" id="ram-4" value="32GB DDR4 RDIMM 2133MHz">
-                                    <label for="ram-4">32GB DDR4 RDIMM 2133MHz
+                                    <input class="custom-radio" name="ram"  type="checkbox" id="ram-5" value="32GB DDR4 RDIMM 2133MHz">
+                                    <label for="ram-5">32GB DDR4 RDIMM 22133MHz
                                     </label>
                                 </div>
                                 <span class="configurator_bottom_price">15 500 ₽</span>
-                                
+                                <input type="number"  class="ram-count" name="count-ram" value="1">
                             </div>
 
 
@@ -747,7 +759,9 @@
                                 </li>
                                 <li>
                                     <strong class="configurator_result-title">CPU:</strong>
-                                    <p class="configurator_result-content">Intel Xeon Bronze 3104 (6С 8.25M Cache 1.70 GHz)</p>
+                                    <p class="configurator_result-content">
+                                        Intel Xeon Bronze 3104 (6С 8.25M Cache 1.70 GHz)
+                                    </p>
                                 </li>
                                 <li>
                                     <strong class="configurator_result-title">Оперативная память (RAM):</strong>
