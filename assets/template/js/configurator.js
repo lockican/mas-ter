@@ -1,7 +1,6 @@
 $(document).ready(function(){
     let productPrice =  parseInt($('.product_price').text().replace(/\s/g, '')) ;
     let sumOptions = new Map(); //ассоциативный массив 
-
     let hardSize = $('.hard-size'); //объем жесткого диска
 
     function calculated(){
@@ -41,17 +40,48 @@ $(document).ready(function(){
             $(this).closest('.configurator_bottom_item').find('.custom-radio').removeClass('active')
         }
     }
-
     function ramInputValue(){
         let maxSizeRam = parseInt($('.custom-radio-btn.active').attr('data-max-val'));
         let current = $(this);
         let inputParent = $('.configurator_block-ram .configurator_bottom_item').find('.custom-radio')
-        let countValus = $('.custom-radio.active').closest('.configurator_bottom_item').find('.ram-count')
+        let countValus = $('.custom-radio:checked').closest('.configurator_bottom_item').find('.ram-count')
         let countMaxSizeRam = 0;
-        countMaxSizeRam = maxSizeRam;
+        let sum = 0;
+        let lastValue = current.val()
+        countMaxSizeRam = maxSizeRam;  
 
-        if(current.val() >= countMaxSizeRam){
-            current.val(countMaxSizeRam)
+        countValus.attr({
+            "min":0
+        })
+
+        countValus.each(function(i){
+            sum += parseInt(countValus[i].value);
+            if(sum <= 0) sum = 1;  
+        })
+        countMaxSizeRam = countMaxSizeRam - sum;
+
+        if(sum == maxSizeRam){
+            current.val(lastValue)
+            inputParent.not('.active').prop('disabled',true)
+            inputParent.not('.active').closest('.configurator_bottom_item').addClass('disabled')
+            
+            countValus.each(function(i){
+                if(countValus[i].value == 0){
+                    console.log($(countValus[i]).closest('.configurator_bottom_item').find('.custom-radio.active')[0])
+                    let currentInput = $(countValus[i]).closest('.configurator_bottom_item').find('.custom-radio.active')[0]
+                    $(countValus[i]).closest('.configurator_bottom_item').addClass('disabled')
+                    $(currentInput).removeClass('active')
+                    $(currentInput).prop('checked',false)
+                    $(countValus[i]).hide()
+                }
+            })
+        }
+        else{
+            inputParent.prop('disabled',false)
+            inputParent.closest('.configurator_bottom_item').removeClass('disabled')
+        }
+        if(countMaxSizeRam < 0){
+            current.val(1) 
             inputParent.not('.active').prop('disabled',true)
             inputParent.not('.active').closest('.configurator_bottom_item').addClass('disabled')
         }
@@ -59,11 +89,7 @@ $(document).ready(function(){
             inputParent.not('.active').prop('disabled',false)
             inputParent.not('.active').closest('.configurator_bottom_item').removeClass('disabled')
         }
-        countValus.each(function(i){    
-            countMaxSizeRam = countMaxSizeRam - parseInt(countValus[i].value);
-        })
         
-         
     }
 
     //фильтрация по атрибутам
@@ -164,7 +190,7 @@ $(document).ready(function(){
 
     $('.configurator_block-ram .custom-radio').on('click',checkRamCount)
 
-    $('.configurator_block-ram .ram-count').on('input change',ramInputValue)
+    $('.configurator_block-ram .ram-count').on(' input change',ramInputValue)
 
     $('.custom-radio-btn').on('click',function(){
         $('.custom-radio-btn').removeClass('active')

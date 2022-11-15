@@ -1,8 +1,15 @@
 $(document).ready(function(){
     function menuHidden(){
-        $('.menu_list').toggle();
         $(this).toggleClass('active');
-        $('.menu_sidebar,.menu_list').toggleClass('active')
+
+        if ($(window).width() > 769){
+            $('.menu_list--desc').toggle();
+            $('.menu_sidebar,.menu_list--desc').toggleClass('active')
+        }
+        else{
+            $('.menu_list--mob').toggle();
+            $('.menu_sidebar,.menu_list--mob').toggleClass('active')
+        }
     }
     $('.menu-btn').on('click',menuHidden);
 
@@ -12,9 +19,35 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 1,
+        variableWidth: true,
         prevArrow:$('.manufacturer-nav .slick-prev'),
         nextArrow:$('.manufacturer-nav .slick-next'),
+        responsive: [
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,      
+                arrows:false 
+              }
+            },
+        ]
     });
+
+    //
+
+    if ($(window).width() < 768) {
+        $('.first_bottom_list').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
+            arrows:false,
+            accessibility: false,
+            infinite: true,
+        })
+    }
+
+    
 
     // review slider
 
